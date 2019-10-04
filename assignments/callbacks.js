@@ -41,18 +41,38 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(arr)
+}
+function length(arr) {
+ return  arr.length;
+}
+console.log(getLength(items, length));
+
+
+function last(arr, cb ) {
+  // last passes the last item of the array into the callback.
+  return cb(arr);
+}
+function calcLast(items) {
+  return items[items.length -1];
 }
 
-function last(arr, cb) {
-  // last passes the last item of the array into the callback.
-}
+console.log(last(items, calcLast));
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  var price = x + y;
+  return cb(price);
 }
+
+let cashTotal = sumNums(4, 2, (price) => `The total is: ${price}`);
+
+console.log(cashTotal);
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+
 }
 
 function contains(item, list, cb) {

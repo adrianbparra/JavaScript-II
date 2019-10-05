@@ -56,7 +56,6 @@ function last(arr, cb ) {
 function calcLast(items) {
   return items[items.length -1];
 }
-
 console.log(last(items, calcLast));
 
 
@@ -66,19 +65,37 @@ function sumNums(x, y, cb) {
   return cb(price);
 }
 
-let cashTotal = sumNums(4, 2, (price) => `The total is: ${price}`);
-
+let cashTotal = sumNums(4, 2, (price) => `The total is: $${price}`);
 console.log(cashTotal);
+
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-
+  var total = x * y;
+  return cb(total);
 }
+
+let multipleTotal = multiplyNums(3, 4, (total) => `The total is: ${total}`)
+console.log(multipleTotal);
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  var boolTest = list.includes(item);
+  return cb(boolTest);
+  
 }
+
+function test(bool) {
+  if (bool) {
+    return "The item was found!"
+  } else {
+    return "The item was not found"
+  }
+}
+
+console.log(contains("Notebook",items, test));
 
 /* STRETCH PROBLEM */
 

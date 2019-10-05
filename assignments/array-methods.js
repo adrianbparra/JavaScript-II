@@ -98,15 +98,15 @@ runners.reduce((acc, cur) =>{
   let key = cur.donation;
   ticketPriceTotal += key;
   return key
-})
+},0)
 
-console.log(ticketPriceTotal);
+console.log("The total is: $" + ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-//Need to get everyone that has a name longer than FOUR characters returns the object
+//Need to get everyone that has a name longer than FOUR characters returns the object of each runner
 let nameThreeChars = [];
 
 nameThreeChars = runners.filter(runner => {
@@ -117,7 +117,7 @@ nameThreeChars = runners.filter(runner => {
 
 console.log(nameThreeChars);
 // Problem 2
-//Need to get everyones email to add to our emailing list
+//Need to get everyones email to add to our emailing list. Return an array.
 
 let runnerEmails = [];
 

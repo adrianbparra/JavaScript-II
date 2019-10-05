@@ -1,6 +1,6 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum', 'Gum'];
 
 /* 
 
@@ -75,7 +75,7 @@ function multiplyNums(x, y, cb) {
   return cb(total);
 }
 
-let multipleTotal = multiplyNums(3, 4, (total) => `The total is multiplied is: ${total}`)
+let multipleTotal = multiplyNums(3, 4, (total) => `The total multiplied is: ${total}`)
 console.log(multipleTotal);
 
 
@@ -103,4 +103,20 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  let duplicateRemoved = [];
+
+
+  for(let x = 0; x < array.length; x++) {
+    if (!duplicateRemoved.includes(array[x])) {
+      duplicateRemoved.push(array[x]);
+    }
+  }
+  return cb(duplicateRemoved)
 }
+
+function newDuplicateFree(arr) {
+  return `The new duplicate free array is ${arr}`
+}
+
+console.log(removeDuplicates(items, newDuplicateFree))
+

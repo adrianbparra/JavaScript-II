@@ -7,6 +7,21 @@
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
+function doubleAddition (x,y) {
+  let add = x + y;
+  
+  function timesTwo(){
+    //let mult = add * 2
+    return add * 2
+  }
+  
+  return timesTwo();
+}
+let func = doubleAddition(2,2);
+console.log(func);
+console.log(func);
+console.log(func);
+
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {

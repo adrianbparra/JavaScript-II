@@ -65,7 +65,7 @@ function sumNums(x, y, cb) {
   return cb(price);
 }
 
-let cashTotal = sumNums(4, 2, (price) => `The total is: $${price}`);
+let cashTotal = sumNums(4, 2, (price) => `The total passed over is: ${price}`);
 console.log(cashTotal);
 
 
@@ -75,7 +75,7 @@ function multiplyNums(x, y, cb) {
   return cb(total);
 }
 
-let multipleTotal = multiplyNums(3, 4, (total) => `The total is: ${total}`)
+let multipleTotal = multiplyNums(3, 4, (total) => `The total is multiplied is: ${total}`)
 console.log(multipleTotal);
 
 
